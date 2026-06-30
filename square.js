@@ -1,8 +1,6 @@
 /* =============================================
    Mes Amis Café — Square Web Payments SDK
    Used only on checkout.html.
-   Card tokenization: browser (Web Payments SDK).
-   Order creation + payment: Netlify Function.
    ============================================= */
 
 'use strict';
@@ -10,13 +8,12 @@
 const SQUARE_CONFIG = {
   appId:      'sandbox-sq0idb-RHii7WJhWOutcMVw54znPA',
   locationId: 'LQXV6WHR8T4R0',
-  // Auto-detect: local dev uses Netlify CLI port 8888, production uses relative path
   get backendUrl() {
     const isLocal = window.location.hostname === '127.0.0.1' ||
                     window.location.hostname === 'localhost';
     return isLocal
-      ? 'http://localhost:8888/api/checkout'
-      : '/api/checkout';
+      ? 'http://localhost:3000/api/checkout'  // vercel dev
+      : '/api/checkout';                       // production
   },
 };
 

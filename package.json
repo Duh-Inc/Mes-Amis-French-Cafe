@@ -1,7 +1,6 @@
 {
   "name": "mesamis-cafe",
   "version": "1.0.0",
-  "description": "Mes Amis Café website",
   "dependencies": {
     "square": "^37.0.0"
   }
