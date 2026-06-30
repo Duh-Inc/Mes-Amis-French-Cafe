@@ -1,0 +1,211 @@
+/* =============================================
+   Mes Amis Café — Home Page Styles
+   ============================================= */
+
+/* ── Hero ── */
+.hero {
+  position: relative;
+  min-height: calc(100vh - var(--nav-height));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(4rem, 10vw, 6rem) clamp(1.5rem, 5vw, 3rem);
+  overflow: hidden;
+}
+.hero__backdrop { position: absolute; inset: 0; z-index: 0; }
+.hero__grain {
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  background-size: 200px;
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+}
+.hero__circle { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.12; }
+.hero__circle--1 {
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, var(--gold), transparent 70%);
+  top: -200px; right: -100px;
+}
+.hero__circle--2 {
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, var(--bg-light), transparent 70%);
+  bottom: -100px; left: -80px;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 720px;
+  animation: heroFadeUp 0.9s ease both;
+}
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero__logo {
+  height: clamp(120px, 18vw, 180px);
+  width: auto;
+  margin: 0 auto 1.75rem;
+  display: block;
+  object-fit: contain;
+  animation: heroFadeUp 0.9s ease both;
+  filter: drop-shadow(0 4px 24px rgba(0,0,0,0.3));
+}
+
+.hero__eyebrow {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.25rem;
+  display: block;
+  animation: heroFadeUp 0.9s 0.1s ease both;
+}
+.hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text-light);
+  margin-bottom: 1.25rem;
+  animation: heroFadeUp 0.9s 0.2s ease both;
+  transition: color 0.3s ease;
+}
+.hero__title em { font-style: italic; color: var(--gold); }
+.hero__sub {
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  color: var(--text-dim);
+  margin-bottom: 2.5rem;
+  font-style: italic;
+  animation: heroFadeUp 0.9s 0.3s ease both;
+}
+.hero__actions {
+  display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+  animation: heroFadeUp 0.9s 0.4s ease both;
+}
+.hero__scroll-hint {
+  position: absolute; bottom: 2.5rem; left: 50%;
+  transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+  font-family: var(--font-ui);
+  font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--text-muted);
+  animation: heroFadeUp 1s 0.8s ease both;
+}
+.hero__scroll-line {
+  width: 1px; height: 40px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+  animation: scrollPulse 1.8s ease-in-out infinite;
+}
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.4; transform: scaleY(1); }
+  50%       { opacity: 1;   transform: scaleY(1.15); }
+}
+
+/* ── Signature cards ── */
+.signature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.sig-card {
+  background: var(--bg-mid);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+.sig-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: var(--border-gold); }
+.sig-card--featured { border-color: var(--border-gold); }
+
+.sig-card__img { height: 200px; background-color: var(--bg-light); background-size: cover; background-position: center; }
+.sig-card__img--one    { background: linear-gradient(135deg, var(--bg-light), var(--bg-mid)); }
+.sig-card__img--two    { background: linear-gradient(135deg, var(--bg-light), var(--bg)); }
+.sig-card__img--three  { background: linear-gradient(135deg, var(--bg-mid), var(--bg-light)); }
+
+.sig-card__body { padding: 1.5rem; }
+.sig-card__badge {
+  display: inline-block;
+  font-family: var(--font-ui); font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
+  background: var(--gold); color: var(--bg);
+  padding: 0.2rem 0.6rem; border-radius: 2px; margin-bottom: 0.6rem; font-weight: 600;
+}
+.sig-card__name { font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; color: var(--text-light); margin-bottom: 0.4rem; }
+.sig-card__desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem; }
+.sig-card__footer { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; }
+.sig-card__price { font-family: var(--font-display); font-size: 1.2rem; color: var(--gold); }
+
+/* ── Visit / Hours ── */
+.visit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.visit-address { font-style: normal; font-size: 1rem; color: var(--text-dim); margin: 1.25rem 0; line-height: 1.8; }
+.hours-table { border-collapse: collapse; font-family: var(--font-ui); font-size: 0.9rem; width: 100%; max-width: 320px; }
+.hours-table th, .hours-table td { padding: 0.5rem 0; border-bottom: 1px solid var(--border); text-align: left; }
+.hours-table th { color: var(--text); font-weight: 400; width: 50%; }
+.hours-table td { color: var(--text-muted); }
+
+.visit-map {
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--border-gold);
+}
+.google-map {
+  display: block;
+  width: 100%;
+  height: 320px;
+  border: 0;
+  border-radius: 6px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .signature-grid { grid-template-columns: 1fr 1fr; }
+  .visit-grid     { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+@media (max-width: 640px) {
+  .signature-grid { grid-template-columns: 1fr; }
+  .hero__scroll-hint { display: none; }
+}
+
+/* ── Delivery / Order Online ── */
+.delivery-wrap {
+  margin-top: 2rem;
+}
+.delivery-label {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+}
+.delivery-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.delivery-btn {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-gold);
+  color: var(--text-dim);
+  background: transparent;
+  transition: background var(--transition), color var(--transition), border-color var(--transition), transform 0.2s ease;
+  white-space: nowrap;
+}
+.delivery-btn:hover {
+  transform: translateY(-1px);
+  border-color: var(--gold);
+}
+.delivery-btn--uber:hover  { background: #06C167; border-color: #06C167; color: #fff; }
+.delivery-btn--door:hover  { background: #FF3008; border-color: #FF3008; color: #fff; }
+.delivery-btn--grub:hover  { background: #F63440; border-color: #F63440; color: #fff; }
+.delivery-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }

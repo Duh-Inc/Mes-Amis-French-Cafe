@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="theme-init.js"></script>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="description" content="Gallery Mes Amis Café. Photos of our space, crêpes, coffee, and rotating local art." />
+ <title>Gallery Mes Amis Café</title>
+ <link rel="stylesheet" href="style.css" />
+ <link rel="stylesheet" href="gallery.css" />
+</head>
+<body>
+
+ <a href="#main-content" class="skip-link">Skip to main content</a>
+  <nav class="nav"></nav>
+
+ <main id="main-content" class="page">
+
+ <header class="page-header">
+ <div class="container">
+ <span class="section__eyebrow">A Closer Look</span>
+ <h1 class="page-header__title">Gallery</h1>
+ <p class="page-header__sub">Take a look at our freindly ambiance or our delicious specialties!</p>
+ </div>
+ </header>
+
+ <!-- Filter tabs -->
+ <div class="gallery-filter-bar" role="navigation" aria-label="Gallery filters">
+ <div class="container">
+ <div class="gallery-filters" role="group" aria-label="Filter gallery by category">
+ <button class="gallery-filter active" data-filter="all"   aria-pressed="true">All</button>
+ <button class="gallery-filter"        data-filter="cafe"  aria-pressed="false">The Café</button>
+ <button class="gallery-filter"        data-filter="food"  aria-pressed="false">Food &amp; Drinks</button>
+ </div>
+ </div>
+ </div>
+
+ <!-- Gallery grid -->
+ <section class="section gallery-section" aria-labelledby="gallery-heading">
+ <h2 class="sr-only" id="gallery-heading">Photo gallery</h2>
+ <div class="container">
+ <div class="gallery-grid" id="gallery-grid" role="list">
+
+ <!-- Food & Drink items -->
+ <figure class="gallery-item" data-category="food" role="listitem">
+ <div class="gallery-item__img gallery-placeholder gallery-placeholder--a" role="img"><img src="/images/" alt=""></div>
+ <figcaption class="gallery-item__caption">[Caption — e.g. "Nutella &amp; banana crêpe"]</figcaption>
+ </figure>
+
+ <figure class="gallery-item gallery-item--wide" data-category="food" role="listitem">
+ <div class="gallery-item__img gallery-placeholder gallery-placeholder--b" role="img"><img src="/images/" alt=""></div>
+ <figcaption class="gallery-item__caption">[Caption — e.g. "Morning espresso pull"]</figcaption>
+ </figure>
+
+ <figure class="gallery-item" data-category="food" role="listitem">
+ <div class="gallery-item__img gallery-placeholder gallery-placeholder--c" role="img"><img src="/images/" alt=""></div>
+ <figcaption class="gallery-item__caption">[Caption — e.g. "Savoury galette of the day"]</figcaption>
+ </figure>
+
+ <figure class="gallery-item" data-category="food" role="listitem">
+ <div class="gallery-item__img gallery-placeholder gallery-placeholder--d" role="img"><img src="/images/" alt=""></div>
+ <figcaption class="gallery-item__caption">[Caption — e.g. "Pastry selection"]</figcaption>
+ </figure>
+
+ <!-- Café items -->
+ <figure class="gallery-item gallery-item--tall" data-category="cafe" role="listitem">
+ <div class="gallery-item__img gallery-placeholder gallery-placeholder--e" role="img"><img src="/images/" alt=""></div>
+ <figcaption class="gallery-item__caption">[Caption — e.g. "The front counter"]</figcaption>
+ </figure>
+
+ <figure class="gallery-item" data-category="cafe" role="listitem">
+ <div class="gallery-item__img gallery-placeholder gallery-placeholder--f" role="img"><img src="/images/" alt=""></div>
+ <figcaption class="gallery-item__caption">[Caption — e.g. "Window seating area"]</figcaption>
+ </figure>
+
+ <figure class="gallery-item gallery-item--wide" data-category="cafe" role="listitem">
+ <div class="gallery-item__img gallery-placeholder gallery-placeholder--g" role="img"><img src="/images/" alt=""></div>
+ <figcaption class="gallery-item__caption">[Caption — e.g. "Interior, late afternoon light"]</figcaption>
+ </figure>
+ </section>
+
+ </main>
+
+ <!-- Lightbox -->
+ <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox" hidden>
+ <button class="lightbox__close" id="lightbox-close" aria-label="Close lightbox">
+ <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+ <path d="M18 6L6 18M6 6l12 12"/>
+ </svg>
+ </button>
+ <div class="lightbox__content">
+ <div class="lightbox__img-wrap" id="lightbox-img-wrap"></div>
+ <p class="lightbox__caption" id="lightbox-caption"></p>
+ </div>
+ </div>
+  <footer></footer>
+
+ <script src="main.js"></script>
+ <script src="gallery.js"></script>
+</body>
+</html>

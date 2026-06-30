@@ -1,0 +1,312 @@
+/* =============================================
+   Mes Amis Café — Checkout Page Styles
+   ============================================= */
+
+/* ── Breadcrumb ── */
+.checkout-breadcrumb {
+  margin-bottom: 2rem;
+}
+.breadcrumb__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  transition: color var(--transition);
+}
+.breadcrumb__link:hover { color: var(--gold); }
+.breadcrumb__link:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: 2px; }
+
+/* ── Layout ── */
+.checkout-layout {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 3.5rem;
+  align-items: start;
+}
+.checkout-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+}
+
+/* ── Checkout sections ── */
+.checkout-section {
+  background: var(--bg-mid);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.75rem;
+  margin-bottom: 1.25rem;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+.checkout-section__title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-light);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.checkout-section__num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: var(--bg);
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.checkout-section__note {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* ── Form fields ── */
+.form-row { display: flex; flex-direction: column; gap: 1rem; }
+.form-row--two { flex-direction: row; }
+.form-field { display: flex; flex-direction: column; gap: 0.4rem; flex: 1; }
+.form-field + .form-field { margin-top: 1rem; }
+.form-row--two .form-field + .form-field { margin-top: 0; }
+
+.form-label {
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.form-label__opt {
+  color: var(--text-muted);
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.75rem;
+}
+
+.form-input {
+  background: var(--input-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  padding: 0.7rem 0.9rem;
+  width: 100%;
+  transition: border-color var(--transition), background var(--transition);
+  outline: none;
+}
+.form-input::placeholder { color: var(--text-muted); opacity: 0.6; }
+.form-input:focus { border-color: var(--gold); }
+.form-input:focus-visible { outline: none; }
+.form-input.invalid { border-color: #f08080; }
+
+/* ── Square card field ──
+   Square mounts an iframe here. We set the background on the
+   wrapper so it shows behind the (transparent) iframe. The SDK
+   handles its own border via buildCardStyle() in square.js so
+   we don't double-border here. */
+.square-card-field {
+  min-height: 89px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--input-bg);
+  transition: background 0.3s ease;
+}
+
+/* ── Error message ── */
+.checkout-error {
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  color: #f08080;
+  margin-top: 0.75rem;
+  line-height: 1.5;
+}
+
+/* ── Pay button ── */
+.checkout-pay-btn {
+  width: 100%;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+  padding: 1rem 2rem;
+  font-size: 0.95rem;
+}
+.checkout-pay-btn[disabled] { opacity: 0.5; cursor: not-allowed; }
+.checkout-pay-btn:not([disabled]):hover {
+  background: var(--gold-light);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(201,162,39,0.3);
+}
+
+/* ── Order summary sidebar ── */
+.checkout-summary {
+  background: var(--bg-mid);
+  border: 1px solid var(--border-gold);
+  border-radius: 6px;
+  padding: 1.75rem;
+  position: sticky;
+  top: calc(var(--nav-height) + 1.5rem);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+.checkout-summary__title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-light);
+  margin-bottom: 1.25rem;
+}
+.checkout-order-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  list-style: none;
+  margin-bottom: 0.25rem;
+}
+.checkout-order-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: var(--font-ui);
+  font-size: 0.875rem;
+  gap: 0.5rem;
+}
+.checkout-order-line__name {
+  color: var(--text-dim);
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.checkout-order-line__qty {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  flex-shrink: 0;
+}
+.checkout-order-line__price {
+  color: var(--text);
+  flex-shrink: 0;
+}
+.summary-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 1.25rem 0;
+}
+.checkout-summary__total {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+.checkout-summary__total-amount { color: var(--gold); }
+.checkout-summary__note {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+.checkout-edit-cart {
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  transition: color var(--transition);
+  display: block;
+  text-align: center;
+}
+.checkout-edit-cart:hover { color: var(--gold); }
+
+/* ── Success state ── */
+.checkout-success {
+  max-width: 560px;
+  margin: 2rem auto;
+  text-align: center;
+}
+.checkout-success[hidden] { display: none; }
+.checkout-success__inner {
+  background: var(--bg-mid);
+  border: 1px solid var(--border-gold);
+  border-radius: 6px;
+  padding: clamp(2.5rem, 6vw, 4rem) 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+.checkout-success__icon {
+  margin-bottom: 0.5rem;
+  animation: successPop 0.5s cubic-bezier(0.34,1.56,0.64,1) both;
+}
+@keyframes successPop {
+  from { opacity: 0; transform: scale(0.6); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.checkout-success__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--text-light);
+}
+.checkout-success__sub {
+  font-size: 0.95rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+.checkout-success__order-id {
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+.checkout-success__order-id code {
+  color: var(--gold);
+  font-size: 0.78rem;
+  word-break: break-all;
+}
+.checkout-success__sandbox-note {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+.checkout-success__actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0.75rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 960px) {
+  .checkout-layout {
+    grid-template-columns: 1fr;
+  }
+  .checkout-summary {
+    position: static;
+    order: -1;
+  }
+}
+@media (max-width: 500px) {
+  .form-row--two { flex-direction: column; }
+}

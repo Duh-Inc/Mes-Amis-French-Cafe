@@ -1,0 +1,192 @@
+/* =============================================
+   Mes Amis Café — About Page Styles
+   ============================================= */
+
+/* ── About hero ── */
+.about-hero {
+  position: relative;
+  padding: clamp(5rem, 10vw, 8rem) clamp(1.5rem, 5vw, 3rem) clamp(4rem, 7vw, 6rem);
+  overflow: hidden;
+}
+.about-hero__bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 80% at 80% 50%, rgba(196, 146, 74, 0.08) 0%, transparent 70%),
+    var(--bg-mid);
+  z-index: 0;
+}
+.about-hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+}
+.about-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text-light);
+  margin: 0.5rem 0 1.25rem;
+}
+.about-hero__title em { color: var(--gold); }
+.about-hero__sub {
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  color: var(--text-dim);
+  font-style: italic;
+}
+
+/* ── Story section ── */
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.story-text p {
+  color: var(--text-dim);
+  line-height: 1.85;
+  margin-bottom: 1.2rem;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+}
+.story-text p em { color: var(--gold); font-style: italic; }
+
+.story-image-block {
+  position: relative;
+  height: 420px;
+}
+.story-image {
+  position: absolute;
+  border-radius: 6px;
+  border: 1px solid var(--border-gold);
+}
+.story-image--main {
+  width: 75%;
+  height: 85%;
+  top: 0; right: 0;
+  background: var(--bg-light);
+}
+.story-image--accent {
+  width: 55%;
+  height: 50%;
+  bottom: 0; left: 0;
+  background: var(--bg-mid);
+  border: 2px solid var(--border-gold);
+}
+
+/* ── Team ── */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+.team-card {
+  text-align: center;
+}
+.team-card__avatar {
+  width: 100px; height: 100px;
+  border-radius: 50%;
+  margin: 0 auto 1.25rem;
+  border: 2px solid var(--border-gold);
+  background: var(--bg-light);
+}
+.team-card__avatar--b { background: var(--bg-mid); }
+.team-card__avatar--c { background: var(--bg-light); opacity: 0.85; }
+.team-card__name {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-light);
+  margin-bottom: 0.2rem;
+}
+.team-card__role {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+}
+.team-card__bio {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* ── Pull quote ── */
+.pullquote-section { text-align: center; }
+.pullquote {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.pullquote__text {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--text-light);
+  line-height: 1.4;
+  margin-bottom: 1.25rem;
+}
+.pullquote__text::before { content: '\201C'; color: var(--gold); }
+.pullquote__text::after  { content: '\201D'; color: var(--gold); }
+.pullquote__source {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ── Contact ── */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+.contact-address {
+  font-style: normal;
+  font-size: 1rem;
+  color: var(--text-dim);
+  line-height: 2;
+  margin-top: 1.5rem;
+}
+.contact-link {
+  color: var(--gold);
+  transition: opacity var(--transition);
+}
+.contact-link:hover { opacity: 0.75; }
+
+.social-links { display: flex; flex-direction: column; gap: 0.75rem; }
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  transition: color var(--transition);
+  padding: 0.5rem 0;
+}
+.social-btn:hover { color: var(--gold); }
+.social-btn:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .story-grid   { grid-template-columns: 1fr; }
+  .story-image-block { height: 280px; margin-top: 1rem; }
+  .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+@media (max-width: 600px) {
+  .values-grid { grid-template-columns: 1fr; }
+  .team-grid   { grid-template-columns: 1fr; }
+}
+
+/* ── Theme transitions ── */
+.about-hero__bg, .value-card, .team-card, .story-image, .cart-item, .cart-summary { transition: background 0.3s ease, border-color 0.3s ease; }

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="theme-init.js"></script>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="description" content="Mes Amis Café menu specialty coffee, crêpes, and pastries." />
+ <title>Menu Mes Amis Café</title>
+ <link rel="stylesheet" href="style.css" />
+ <link rel="stylesheet" href="menu.css" />
+</head>
+<body>
+
+ <a href="#main-content" class="skip-link">Skip to main content</a>
+  <nav class="nav"></nav>
+
+ <main id="main-content" class="page">
+
+ <header class="page-header">
+ <div class="container">
+ <span class="section__eyebrow">What We Serve</span>
+ <h1 class="page-header__title">Our Menu</h1>
+ <p class="page-header__sub">Our famous french cuisine. Grab a crèpe or a sandwich!</p>
+ </div>
+ </header>
+
+ <!-- Category Tabs -->
+ <div class="menu-tabs-bar" role="navigation" aria-label="Menu categories">
+ <div class="container">
+ <div class="menu-tabs" role="tablist">
+ <button class="menu-tab active" role="tab" aria-selected="true"  aria-controls="panel-crepes"     id="tab-crepes">Crêpes</button>
+ <button class="menu-tab"        role="tab" aria-selected="false" aria-controls="panel-sandwiches" id="tab-sandwiches">Sandwiches &amp; Quiches</button>
+ <button class="menu-tab"        role="tab" aria-selected="false" aria-controls="panel-drinks"     id="tab-drinks">Drinks</button>
+ </div>
+ </div>
+ </div>
+
+ <div class="section">
+ <div class="container">
+
+ <!-- Crêpes Panel — Savoury first, Sweet second -->
+ <section id="panel-crepes" role="tabpanel" aria-labelledby="tab-crepes" class="menu-panel active">
+ <div class="menu-panel__header">
+ <h2 class="menu-panel__title">Crêpes</h2>
+ <p class="menu-panel__note">All galettes are made with organic buckwheat. Sweet crêpes use our classic batter.</p>
+ </div>
+ <div class="menu-subsection">
+ <h3 class="menu-subsection__title">Savory — Galette</h3>
+ <div class="menu-grid" id="crepes-savoury"></div>
+ </div>
+ <div class="menu-subsection">
+ <h3 class="menu-subsection__title">Sweet</h3>
+ <div class="menu-grid" id="crepes-sweet"></div>
+ </div>
+ </section>
+
+ <!-- Sandwiches & Quiche Panel -->
+ <section id="panel-sandwiches" role="tabpanel" aria-labelledby="tab-sandwiches" class="menu-panel" hidden>
+ <div class="menu-panel__header">
+ <h2 class="menu-panel__title">Sandwiches &amp; Quiche</h2>
+ <p class="menu-panel__note">All sandwiches served on freshly baked baguette.</p>
+ </div>
+ <div class="menu-subsection">
+ <h3 class="menu-subsection__title">À La Parisienne Sandwiches</h3>
+ <div class="menu-grid" id="sandwiches"></div>
+ </div>
+ <div class="menu-subsection">
+ <h3 class="menu-subsection__title">Mini Quiche</h3>
+ <div class="menu-grid" id="quiche"></div>
+ </div>
+ </section>
+
+ <!-- Drinks Panel -->
+ <section id="panel-drinks" role="tabpanel" aria-labelledby="tab-drinks" class="menu-panel" hidden>
+ <div class="menu-panel__header">
+ <h2 class="menu-panel__title">Drinks</h2>
+ <p class="menu-panel__note">Oat milk available on all espresso drinks.</p>
+ </div>
+ <div class="menu-subsection">
+ <h3 class="menu-subsection__title">Coffee</h3>
+ <div class="menu-grid" id="coffee"></div>
+ </div>
+ <div class="menu-subsection">
+ <h3 class="menu-subsection__title">Other Drinks</h3>
+ <div class="menu-grid" id="drinks"></div>
+ </div>
+ </section>
+
+ </div>
+ </div>
+
+ <aside class="allergen-note section--alt" aria-label="Allergen information">
+ <div class="container">
+ <p>
+ <strong>Allergen note:</strong> Gluten free batter is available for all crèpes upon request.
+ </p>
+ </div>
+ </aside>
+
+ </main>
+  <footer></footer>
+
+ <script src="main.js"></script>
+ <script src="menu.js"></script>
+</body>
+</html>

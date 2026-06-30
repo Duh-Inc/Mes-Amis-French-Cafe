@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="theme-init.js"></script>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="description" content="Your cart Mes Amis Café." />
+ <title>Cart Mes Amis Café</title>
+ <link rel="stylesheet" href="style.css" />
+ <link rel="stylesheet" href="cart.css" />
+</head>
+<body>
+
+ <a href="#main-content" class="skip-link">Skip to main content</a>
+  <nav class="nav"></nav>
+
+ <main id="main-content" class="page">
+ <div class="section">
+ <div class="container cart-layout">
+
+ <div class="cart-main">
+ <header class="cart-header">
+ <h1 class="cart-header__title">Your Cart</h1>
+ <button class="cart-header__clear btn btn--outline btn--sm" id="clear-cart" aria-label="Clear all items from cart">Clear All</button>
+ </header>
+
+ <div class="cart-empty" id="cart-empty" aria-live="polite">
+ <div class="cart-empty__icon" aria-hidden="true">
+ <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+ <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+ <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+ </svg>
+ </div>
+ <p class="cart-empty__title">Your cart is empty</p>
+ <p class="cart-empty__sub">Head to the menu to add something delicious.</p>
+ <a href="menu.html" class="btn btn--primary">Browse the Menu</a>
+ </div>
+
+ <ul class="cart-items" id="cart-items" aria-label="Cart items" aria-live="polite"></ul>
+
+ <div class="cart-special-request" id="cart-special-request">
+   <label class="cart-special-request__label" for="special-request">Special Request</label>
+   <p class="cart-special-request__hint" id="special-request-hint">Allergies, dietary needs, or anything else we should know?</p>
+   <textarea
+     class="cart-special-request__input"
+     id="special-request"
+     name="special-request"
+     rows="3"
+     maxlength="400"
+     placeholder="e.g. No nuts, extra hot, oat milk…"
+     aria-describedby="special-request-hint"
+   ></textarea>
+   <div class="cart-special-request__footer">
+     <span class="cart-special-request__chars" id="special-request-chars" aria-live="polite">0 / 400</span>
+   </div>
+ </div>
+ </div>
+
+ <aside class="cart-summary" aria-label="Order summary" id="cart-summary">
+ <h2 class="cart-summary__title">Order Summary</h2>
+ <dl class="summary-lines" id="summary-lines"></dl>
+ <div class="summary-divider"></div>
+ <div class="summary-total">
+ <span>Total</span>
+ <span id="total-value">$0.00</span>
+ </div>
+ <p class="summary-note">Taxes and fees calculated at checkout.</p>
+ </div>
+ <a href="checkout.html" class="btn btn--primary cart-checkout-btn" id="checkout-btn">Proceed to Checkout</a>
+ <a href="menu.html" class="cart-continue">Continue Shopping</a>
+
+ <div class="cart-delivery">
+ <p class="cart-delivery__label">Or order through our partners</p>
+ <div class="cart-delivery__btns">
+ <a href="https://www.ubereats.com/store/mes-amis-french-cafe/1uUW-VKiWXecocAuegHHyQ"
+    target="_blank" rel="noopener" class="delivery-btn delivery-btn--uber">Uber Eats</a>
+ <a href="https://www.doordash.com/en/store/mes-amis-french-cafe-inc-ardsley-42332227/105163347/"
+    target="_blank" rel="noopener" class="delivery-btn delivery-btn--door">DoorDash</a>
+ <a href="https://www.grubhub.com/restaurant/mes-amis-french-cafe-469-ashford-avenue-ardsley/14696032"
+    target="_blank" rel="noopener" class="delivery-btn delivery-btn--grub">Grubhub</a>
+ </div>
+ </div>
+ </aside>
+
+ </div>
+ </div>
+ </main>
+  <footer></footer>
+
+ <script src="main.js"></script>
+ <script src="cart.js"></script>
+</body>
+</html>

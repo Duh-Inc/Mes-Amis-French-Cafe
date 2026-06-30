@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="theme-init.js"></script>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <meta name="description" content="Mes Amis Café A café and crêpe shop serving handcrafted drinks, fresh crêpes, and pastries." />
+ <title>Mes Amis Café Home</title>
+ <link rel="stylesheet" href="style.css" />
+ <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+
+ <a href="#main-content" class="skip-link">Skip to main content</a>
+  <nav class="nav"></nav>
+
+ <main id="main-content">
+
+ <!-- Hero -->
+ <section class="hero" aria-label="Welcome to Mes Amis Café">
+ <div class="hero__backdrop" aria-hidden="true">
+ <div class="hero__grain"></div>
+ <div class="hero__circle hero__circle--1"></div>
+ <div class="hero__circle hero__circle--2"></div>
+ </div>
+ <div class="hero__content">
+ <img src="images/mesamis.png" alt="Mes Amis Café" class="hero__logo" aria-hidden="true" />
+ <p class="hero__eyebrow">Bienvenue</p>
+ <h1 class="hero__title">A café &amp; crêperie<br />
+ <em>for everyone</em>
+ </h1>
+ <p class="hero__sub">Handcrafted coffee, sweet &amp; savoury crêpes, and a corner that feels like yours.</p>
+ <div class="hero__actions">
+ <a href="menu.html" class="btn btn--primary">Explore the Menu</a>
+ <a href="about.html" class="btn btn--outline">Our Story</a>
+ </div>
+ </div>
+ <div class="hero__scroll-hint" aria-hidden="true">
+ <span>Scroll</span>
+ <div class="hero__scroll-line"></div>
+ </div>
+ </section>
+
+ <!-- Signature items -->
+ <section class="section" aria-labelledby="signature-heading">
+ <div class="container">
+ <span class="section__eyebrow">From the Menu</span>
+ <h2 class="section__title" id="signature-heading">A Few Favourites</h2>
+ <p class="section__lead">Some of our signature dishes, with nothing that isn't to love</p>
+
+ <div class="signature-grid">
+ <article class="sig-card">
+ <div class="sig-card__img sig-card__img--one" role="img"><img src="/images/croque_monsieur.png" alt=""></div>
+ <div class="sig-card__body">
+ <h3 class="sig-card__name">Croque Monsieur</h3>
+ <p class="sig-card__desc">Ham, Cheese, béchamel sauce</p>
+ <div class="sig-card__footer">
+ <span class="sig-card__price">$15.00</span>
+ <a href="menu.html" class="btn btn--outline btn--sm">View in Menu</a>
+ </div>
+ </div>
+ </article>
+
+ <article class="sig-card sig-card--featured">
+ <div class="sig-card__img sig-card__img--two" role="img"><img src="/images/florentine.png" alt=""></div>
+ <div class="sig-card__body">
+ <span class="sig-card__badge">Fan Favourite</span>
+ <h3 class="sig-card__name">La Florentine</h3>
+ <p class="sig-card__desc">Goat cheese, sautéed spinach, honey.</p>
+ <div class="sig-card__footer">
+ <span class="sig-card__price">$18.00</span>
+ <a href="menu.html" class="btn btn--outline btn--sm">View in Menu</a>
+ </div>
+ </div>
+ </article>
+
+ <article class="sig-card">
+ <div class="sig-card__img sig-card__img--three" role="img"><img src="/images/quiche_lorraine.png" alt=""></div>
+ <div class="sig-card__body">
+ <h3 class="sig-card__name">Quiche Lorraine</h3>
+ <p class="sig-card__desc">Bacon and cheese.</p>
+ <div class="sig-card__footer">
+ <span class="sig-card__price">$7.20</span>
+ <a href="menu.html" class="btn btn--outline btn--sm">View in Menu</a>
+ </div>
+ </div>
+ </article>
+ </div>
+ </div>
+ </section>
+
+ <!-- Hours & Location -->
+ <section class="section section--alt" aria-labelledby="visit-heading">
+ <div class="container visit-grid">
+ <div class="visit-info">
+ <span class="section__eyebrow">Come Find Us</span>
+ <h2 class="section__title" id="visit-heading">Hours &amp; Location</h2>
+ <address class="visit-address">
+ 469 Ashford Ave<br />
+ Ardsley, NY 10502
+ </address>
+ <table class="hours-table" aria-label="Opening hours">
+ <tbody>
+ <tr><th scope="row">Monday – Saturday</th><td>8:00 am – 6:00 pm</td></tr>
+ <tr><th scope="row">Sunday</th><td>9:00 am – 7:00 pm</td></tr>
+ </tbody>
+ </table>
+
+ <div class="delivery-wrap">
+ <p class="delivery-label">Order Online</p>
+ <div class="delivery-btns">
+ <a href="https://www.ubereats.com/store/mes-amis-french-cafe/1uUW-VKiWXecocAuegHHyQ"
+    target="_blank" rel="noopener" class="delivery-btn delivery-btn--uber" aria-label="Order on Uber Eats">Uber Eats</a>
+ <a href="https://www.doordash.com/en/store/mes-amis-french-cafe-inc-ardsley-42332227/105163347/"
+    target="_blank" rel="noopener" class="delivery-btn delivery-btn--door" aria-label="Order on DoorDash">DoorDash</a>
+ <a href="https://www.grubhub.com/restaurant/mes-amis-french-cafe-469-ashford-avenue-ardsley/14696032"
+    target="_blank" rel="noopener" class="delivery-btn delivery-btn--grub" aria-label="Order on Grubhub">Grubhub</a>
+ </div>
+ </div>
+ </div>
+ <div class="visit-map" aria-label="Map showing Mes Amis Café at 469 Ashford Ave, Ardsley NY">
+ <iframe width="100%" height="650px" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB2NIWI3Tv9iDPrlnowr_0ZqZWoAQydKJU&q=Mes%20Amis%20French%20Cafe%2C%20Ashford%20Avenue%2C%20Ardsley%2C%20NY%2C%20USA&maptype=roadmap" allowfullscreen></iframe>
+ </div>
+ </div>
+ </section>
+
+ </main>
+  <footer></footer>
+
+ <script src="main.js"></script>
+ <script src="home.js"></script>
+</body>
+</html>
