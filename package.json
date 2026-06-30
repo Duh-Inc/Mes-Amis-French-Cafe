@@ -1,7 +1,0 @@
-{
-  "name": "mesamis-cafe",
-  "version": "1.0.0",
-  "dependencies": {
-    "square": "^37.0.0"
-  }
-}
