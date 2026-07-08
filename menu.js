@@ -45,9 +45,10 @@ const MENU = {
     { id: 'sw4', name: 'Jambon Brie — Jambon de Paris',     img: 'jambon_brie.png',          desc: 'Ham, brie cheese, cornichons.',                     price: 15.00 },
     { id: 'sw5', name: 'SBC',                               img: 'sbc.png',                  desc: 'Dried sausage, butter, cornichon pickles.',         price: 15.00 },
     { id: 'sw6', name: 'Jambon Beurre — Jambon de Paris',   img: 'jambon_beurre.png',        desc: 'Ham, butter.',                                      price:  9.00 },
-    { id: 'sw7', name: 'Jambon-Fromage — Jambon de Paris',  img: 'jambon_fromage.png',       desc: 'Ham, Emmental cheese, butter.',                     price: 10.20 },
-    { id: 'sw8', name: 'Thon Maison',                       img: 'thon_maison.png',          desc: 'Homemade tuna rillette.',                           price: 15.00 },
-    { id: 'sw9', name: 'Briard',                            img: 'briard.png',               desc: 'Brie, arugula, prunes, balsamic vinegar.',          price: 15.00 },
+    { id: 'sw7', name: 'Jambon-Fromage',  img: 'jambon_fromage_gourmet.png',       desc: 'Jambon-Fromage with Lettuce, Tomatoes and Onions.',                     price: 10.20 },
+    { id: 'sw7', name: 'Jambon-Fromage Gourmet',  img: 'jambon_fromage.png',       desc: 'Ham, Emmental cheese, butter.',                     price: 10.20 },
+    { id: 'sw9', name: 'Thon Maison',                       img: 'thon_maison.png',          desc: 'Homemade tuna rillette.',                           price: 15.00 },
+    { id: 'sw10', name: 'Briard',                            img: 'briard.png',               desc: 'Brie, arugula, prunes, balsamic vinegar.',          price: 15.00 },
   ],
 
   /* ── Coffee ── */
