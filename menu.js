@@ -44,7 +44,7 @@ const MENU = {
     { id: 'sw3', name: 'Croque Madame',                     img: 'croque_madame.png',        desc: 'Croque-Monsieur with egg.',                         price: 17.40 },
     { id: 'sw4', name: 'Jambon Brie — Jambon de Paris',     img: 'jambon_brie.png',          desc: 'Ham, brie cheese, cornichons.',                     price: 15.00 },
     { id: 'sw5', name: 'Soppressata',                               img: 'soppressata.png',                  desc: 'Dried sausage, butter, cornichon pickles.',         price: 15.00 },
-    { id: 'sw6', name: 'Soppressata Gourmet',                               img: 'soppressata.png',                  desc: 'Soppressata with Lettuce, Tomatoes and Onions.',         price: 17.00 },
+    { id: 'sw6', name: 'Soppressata Gourmet',                               img: 'soppressata_gourmet.png',                  desc: 'Soppressata with Lettuce, Tomatoes and Onions.',         price: 17.00 },
     { id: 'sw7', name: 'Jambon Beurre — Jambon de Paris',   img: 'jambon_beurre.png',        desc: 'Ham, butter.',                                      price:  9.00 },
     { id: 'sw8', name: 'Jambon-Fromage',  img: 'jambon_fromage_gourmet.png',       desc: 'Jambon-Fromage with Lettuce, Tomatoes and Onions.',                     price: 10.20 },
     { id: 'sw9', name: 'Jambon-Fromage Gourmet',  img: 'jambon_fromage.png',       desc: 'Ham, Emmental cheese, butter.',                     price: 13.00 },
